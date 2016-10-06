@@ -18,5 +18,7 @@
 	<string name="ruby">Ruby</string>
 	<string name="php">PHP</string>
 	<string name="python">Python</string>
+	<string name="username">Username</string>
+	<string name="password">Password</string>
 
 </resources>

@@ -7,7 +7,7 @@
 	android:fitsSystemWindows="true">
 
 	<!-- Page Content -->
-	<RelativeLayout
+	<LinearLayout
 		android:id="@+id/main_content"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
@@ -17,7 +17,6 @@
 			android:id="@+id/toolbar"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_alignParentTop="true"
 			android:background="@color/colorPrimary"
 			android:minHeight="?attr/actionBarSize"
 			app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
@@ -28,9 +27,42 @@
 			android:layout_height="wrap_content"
 			android:layout_centerInParent="true"
 			android:text="MENU ITEM"
+			android:layout_gravity="center"
 			android:textColor="@android:color/darker_gray"
 			android:textSize="35sp"/>
-	</RelativeLayout>
+
+		<!-- ctrl+q on TextInputLayout -->
+		<android.support.design.widget.TextInputLayout android:id="@+id/inputLayoutUsername"
+													   android:layout_width="match_parent"
+													   android:layout_height="wrap_content">
+			<EditText
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:inputType="textPersonName"
+				android:hint="@string/username"
+				android:ems="10"
+				android:id="@+id/etUsername"/>
+		</android.support.design.widget.TextInputLayout>
+		<android.support.design.widget.TextInputLayout android:id="@+id/inputLayoutPassword"
+													   android:layout_width="match_parent"
+													   android:layout_height="wrap_content">
+			<EditText
+				android:hint="@string/password"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:inputType="textPassword"
+				android:ems="10"
+				android:layout_marginTop="11dp" android:id="@+id/etPassword"/>
+		</android.support.design.widget.TextInputLayout>
+		<Button
+			android:text="Login"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btnLogin"
+			android:onClick="validateAndLogin"
+			/>
+
+	</LinearLayout>
 
 	<!-- Navigation View -->
 	<android.support.design.widget.NavigationView
